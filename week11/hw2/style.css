@@ -1,6 +1,7 @@
 body {
     background-color: #f7f7f7;
     margin: 0;
+    margin-bottom:50px;
 }
 * {
     box-sizing: border-box;
@@ -63,4 +64,56 @@ body {
 .banner h1 {
     font-size: 28px;
     margin: 0;
+}
+.container__wrapper {
+    /* max-width: 1280px; */
+    margin: 10px auto;
+    padding: 10px 20px;
+}
+
+.article {
+    margin-bottom: 15px;
+}
+
+.article__title {
+    display: flex;
+    margin-bottom: 10px;
+}
+.article__title:first-child {
+    font-weight: bold;
+    /* margin-right: 10px; */
+}
+.article__edit {
+    margin-left: 5px;
+}
+
+.article__edit-btn{
+    text-decoration: none;
+}
+
+.article__info {
+    color: thistle;
+    margin-bottom: 5px;
+}
+.article__content {
+    margin-bottom: 5px;
+    max-width: 100%;
+    word-break: break-all;
+    white-space: pre-line;
+}
+
+footer {
+    background-color: #434343;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+footer > div {
+    color: #eeeeee;
 }
