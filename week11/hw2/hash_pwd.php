@@ -1,11 +1,3 @@
-<?php
-    session_start();
-    $username = NULL;
-    // 登入成功後，設定 Session 並跳轉回 index.php
-    if(!empty($_SESSION['username'])){
-        $username = $_SESSION['username'];
-    }
-?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -28,14 +20,10 @@
                         <li><a href="#">關於我</a></li>
                     </div>
                     <div>
-                        <?php if(!$username) {?>
-                            <li><a href="login.php">登入</a></li>
-                        <?php }else{ ?>
-                            <li><a href="hash_pwd.php">Hash 密碼</a></li>
-                            <li><a href="add_article.php">發布文章</a></li>
-                            <li><a href="admin.php">管理後台</a></li>
-                            <li><a href="logout.php">登出</a></li>
-                        <?php } ?>
+                        <li><a href="add_article.php">發布文章</a></li>
+                        <li><a href="admin.php">管理後台</a></li>
+                        <li><a href="login.php">登入</a></li>
+                        <li><a href="logout.php">登出</a></li>
                     </div>    
                 </ul>
             </div>
@@ -65,10 +53,10 @@
                             echo "<h2 class='error_code'>".$msg."</h2>";
                         }
                     ?>
-                    <form class='login__form' method='POST' action='handle_login.php'>
+                    <form class='login__form' method='POST' action='handle_hash_pwd.php'>
                         <div class='login__form-input'><span>帳號 : </span><input name='username' type='text' /></div>
                         <div class='login__form-input'><span>密碼 : </span><input name='password' type='password' /></div>
-                        <input class='login__sub-btn' type='submit' value='登入' />
+                        <input class='login__sub-btn' type='submit' value='Go Hash' />
                     </form>
                 </div>
             </div>
