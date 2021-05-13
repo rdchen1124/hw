@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once("conn.php");
+require_once("utils.php");
 if(!empty($conn->error) ){
     echo "連線失敗!!<br>";
 }
@@ -52,18 +53,18 @@ $result = $stmt->get_result();
                     <?php while($row = $result->fetch_assoc()){ ?>
                         <article class='article'>
                             <div class='article__title'>
-                                <div><?php echo $row['title'] ?></div>
+                                <div><?php echo escapeChars($row['title']) ?></div>
                                 <div class='article__edit'>
                                     <?php if($username) {?>
-                                        <a class='article__edit-btn' href='edit_article.php'>編輯</a>
+                                        <a class='article__edit-btn' href='edit_article.php?id=<?php echo $row['id']; ?>'>編輯</a>
                                     <?php } ?> 
                                 </div>
                             </div>
                             <div class='article__info'>
-                                <div><?php echo $row['created_at'] ?></div>
+                                <div><?php echo escapeChars($row['created_at']) ?></div>
                             </div>
                             <div class='article__content'>
-                                <?php echo $row['content'] ?>
+                                <?php echo escapeChars($row['content']) ?>
                             </div>
                             <b><a class='article__read_more' herf='article.php?id=1'>READ MORE</a></b>
                         </article>
