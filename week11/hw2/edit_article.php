@@ -51,7 +51,7 @@
                                     $msg = '資料有缺失';
                                 }
                                 if($err == '2'){
-                                    $msg = '新增文章失敗';
+                                    $msg = '編輯文章失敗';
                                 }
                                 echo "<h2 class='error_code'>".$msg."</h2>";
                             }
@@ -61,6 +61,7 @@
                         </div>
                         <span>內容 : </span>
                         <textarea name='content'> <?php echo escapeChars($row['content']) ?> </textarea>
+                        <input type='hidden' name='id' value='<?php echo $id; ?>' />
                         <input class='login__sub-btn' type='submit' value='送出' />
                     </form>
                 </div>

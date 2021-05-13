@@ -65,8 +65,8 @@ $result = $stmt->get_result();
                             </div>
                             <div class='article__content'>
                                 <?php echo escapeChars($row['content']) ?>
+                                <a class='article__read_more' href='article.php?id=<?php echo $row['id']; ?>'>READ MORE</a>
                             </div>
-                            <b><a class='article__read_more' herf='article.php?id=1'>READ MORE</a></b>
                         </article>
                     <?php } ?>
                 </div>

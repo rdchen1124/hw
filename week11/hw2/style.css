@@ -71,15 +71,17 @@ body {
 }
 
 .article {
-    margin-bottom: 15px;
+    margin: 15px;
 }
 
 .article__title {
     display: flex;
     margin-bottom: 10px;
+    align-items: center;
 }
 .article__title:first-child {
     font-weight: bold;
+    font-size: x-large;
     /* margin-right: 10px; */
 }
 .article__edit {
@@ -87,7 +89,13 @@ body {
 }
 
 .article__edit-btn{
+    /* border: 1px solid #c2bffb;
+    border-radius: 2px;
+    padding: 5px 10px; */
+    margin-left: 5px;
+    font-size: large;
     text-decoration: none;
+    color: lightseagreen;
 }
 
 .article__info {
@@ -152,6 +160,10 @@ body {
     border: 1px solid #c2bffb;
     box-sizing: border-box;
     margin: 10px auto;
+}
+.article__read_more {
+    text-decoration: none;
+    color: darkcyan;
 }
 .error_code {
     color: #a20606;
