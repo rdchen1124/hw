@@ -31,7 +31,6 @@
                         <?php if(!$username) {?>
                             <li><a href="login.php">登入</a></li>
                         <?php }else{ ?>
-                            <li><a href="hash_pwd.php">Hash 密碼</a></li>
                             <li><a href="add_article.php">發布文章</a></li>
                             <li><a href="admin.php">管理後台</a></li>
                             <li><a href="logout.php">登出</a></li>
