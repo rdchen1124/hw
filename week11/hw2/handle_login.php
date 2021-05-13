@@ -2,9 +2,7 @@
 session_start();
 require_once('conn.php');
 if(empty($_POST['username']) || empty($_POST['password'])){
-    
     header('Location:login.php?errorCode=1');
-
 }
 $username = $_POST['username'];
 $password = $_POST['password'];
