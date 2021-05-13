@@ -66,7 +66,6 @@ body {
     margin: 0;
 }
 .container__wrapper {
-    /* max-width: 1280px; */
     margin: 10px auto;
     padding: 10px 20px;
 }
@@ -101,7 +100,36 @@ body {
     word-break: break-all;
     white-space: pre-line;
 }
-
+.login__container {
+    max-width: 50%;
+    background-color: white;
+    margin:0 auto;
+    padding: 10px 20px;
+}
+.login__title {
+    margin: 20px 0;
+    /* margin-bottom: 10px; */
+}
+.login__form {
+    max-width: 50%;
+}
+.login__form-input {
+    margin-bottom: 10px;
+}
+.login__form-input input {
+    border: 1px solid #c2bffb;
+    padding: 5px;
+}
+.login__sub-btn {
+    border: 1px solid #c2bffb;
+    padding: 10px;
+    width: 100px;
+    border-radius: 1px;
+    font-size: 16px;
+}
+.error_code {
+    color: #a20606;
+}
 footer {
     background-color: #434343;
     display: flex;
