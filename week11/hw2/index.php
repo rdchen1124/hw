@@ -19,7 +19,8 @@ if(!empty($_SESSION['username'])){
 
 $sql = "SELECT A.id AS id, U.username AS username, U.nickname AS nickname, ".
     "A.title AS title, A.content AS content, A.created_at AS created_at FROM `articles` AS A ".
-    "LEFT JOIN `users` AS U ON A.username = U.username ORDER BY A.id DESC LIMIT ?  OFFSET ? ";
+    "LEFT JOIN `users` AS U ON A.username = U.username WHERE A.is_deleted IS NULL ".
+    "ORDER BY A.id DESC LIMIT ?  OFFSET ? ";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param('ii', $limit, $offset);
@@ -48,6 +49,16 @@ $result = $stmt->get_result();
                     <div>basic blog demo</div>
                 </div>
             </section>
+            <?php if(!empty($_GET['errorCode'])) {
+                $msg = '';
+                $errorCode = $_GET['errorCode'];
+                if($errorCode == 1){
+                    $msg = '權限不足無法操作';
+                }else{
+                    $msg = '發生不明錯誤';
+                }
+                echo '<h2 class="error_code">'.$msg.'</h2>';
+            } ?>
             <div class='container__wrapper'>
                 <div class='articles'>
                     <?php while($row = $result->fetch_assoc()){ ?>

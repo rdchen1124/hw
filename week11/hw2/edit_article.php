@@ -2,14 +2,10 @@
     session_start();
     require_once("conn.php");
     require_once("utils.php");
-
+    require_once('check_permission.php');
     $id = $_GET['id'];
-    $username = NULL;
-    // 登入成功後，設定 Session 並跳轉回 index.php
-    if(!empty($_SESSION['username'])){
-        $username = $_SESSION['username'];
-    }
-
+    $username = $_SESSION['username'];
+    
     $sql = "SELECT title, content FROM `articles` WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('i', $id);

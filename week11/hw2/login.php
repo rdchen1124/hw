@@ -1,3 +1,4 @@
+<?php $username = NULL; ?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -29,7 +30,7 @@
                                 $msg = '資料有缺失';
                             }
                             if($err == '2'){
-                                $msg = '資料有誤';
+                                $msg = '請確認帳號及密碼輸入無誤';
                             }
                             echo "<h2 class='error_code'>".$msg."</h2>";
                         }
@@ -37,7 +38,7 @@
                     <form class='login__form' method='POST' action='handle_login.php'>
                         <div class='login__form-input'><span>帳號 : </span><input name='username' type='text' /></div>
                         <div class='login__form-input'><span>密碼 : </span><input name='password' type='password' /></div>
-                        <input class='login__sub-btn' type='submit' value='登入' />
+                        <input class='login__sub-btn' type='submit' value='送出' />
                     </form>
                 </div>
             </div>

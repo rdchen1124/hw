@@ -135,6 +135,12 @@ body {
     border-radius: 1px;
     font-size: 16px;
 }
+.add_article__container {
+    max-width: 60%;
+    background-color: white;
+    margin:0 auto;
+    padding: 10px 20px;
+}
 .add_article__form {
     max-width: 90%;
     margin: 0 auto;
@@ -143,9 +149,6 @@ body {
     margin-bottom: 10px;
     max-width: 100%;
 }
-/* .add_article__form-input span{
-    margin-bottom: 10px;
-} */
 .add_article__form-input input {
     border: 1px solid #c2bffb;
     padding: 5px;
@@ -165,6 +168,42 @@ body {
     text-decoration: none;
     color: darkcyan;
 }
+.admin__container {
+    max-width: 60%;
+    background-color: white;
+    margin:0 auto;
+    padding: 10px 20px;
+}
+.admin__article_wrapper {
+    margin: 10px auto;
+    padding: 5px;
+}
+.admin__article_wrapper > a {
+    text-decoration: none;
+}
+.admin__article {
+    color:rgb(112, 71, 245);
+    font-size: large;
+}
+.admin__edit_article {
+    border: 1px solid lightseagreen;
+    background-color: seagreen;
+    color: white;
+    font-size: smaller;
+    width: 100px;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+.admin__delete_article {
+    border: 1px solid lightseagreen;
+    background-color: salmon;
+    color: white;
+    font-size: smaller;
+    width: 100px;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
 .error_code {
     color: #a20606;
 }

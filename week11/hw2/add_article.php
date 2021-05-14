@@ -1,10 +1,7 @@
 <?php
     session_start();
-    $username = NULL;
-    // 登入成功後，設定 Session 並跳轉回 index.php
-    if(!empty($_SESSION['username'])){
-        $username = $_SESSION['username'];
-    }
+    require_once('check_permission.php');
+    $username = $_SESSION['username'];
 ?>
 <!doctype html>
 <html lang="en">
@@ -26,7 +23,7 @@
             </section>
 
             <div class='container__wrapper'>
-                <div class='login__container'>
+                <div class='add_article__container'>
                     <form class='add_article__form' method='POST' action='handle_add_article.php'>
                         <h1>新增文章</h1>
                         <?php
