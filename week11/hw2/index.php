@@ -64,7 +64,7 @@ $result = $stmt->get_result();
                     <?php while($row = $result->fetch_assoc()){ ?>
                         <article class='article'>
                             <div class='article__title'>
-                                <div><?php echo escapeChars($row['title']) ?></div>
+                                <div class='article__title_name'><a href='article.php?id=<?php echo $row['id']; ?>'><?php echo escapeChars($row['title']) ?></a></div>
                                 <div class='article__edit'>
                                     <?php if($username) {?>
                                         <a class='article__edit-btn' href='edit_article.php?id=<?php echo $row['id']; ?>'>編輯</a>
